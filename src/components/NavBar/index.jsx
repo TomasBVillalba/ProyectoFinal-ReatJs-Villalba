@@ -1,16 +1,14 @@
 import React from 'react';
 import CartWidget from '../CartWidget';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light ">
     <div className="container">
-        {/* <link className="navbar-brand">
-            <a class="navbar-brand" href="index.html">
-                <img src="./logomartele.jpg" width="110" height="80" className="logo-brand" alt="logo"/>
-            </a>
-        </link> */}
+    <Link to="/">
+          <img src="./logomartele.jpg" width="110" height="80" className="logo-brand" alt="logo" aria-label="Home"/>
+        </Link>
         <button
         className="navbar-toggler"
         type="button"
@@ -39,13 +37,14 @@ export const NavBar = () => {
                 <li className="nav-item">
                     <NavLink className="nav-link" to='/categoria/setmatero' >Set matero</NavLink>
                 </li>
-                <li className="nav-item">
+            </ul>
+            <ul className="navbar-nav ml-auto">
+                <li className="nav-item ml-auto">
                     <NavLink className="nav-link" to='cart'>
-                    <CartWidget/>
+                        <CartWidget/>
                     </NavLink>
                 </li>
             </ul>
-
         </div>
     </div>
     </nav>

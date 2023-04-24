@@ -17,11 +17,11 @@ useEffect (() => {
 }, [initial])
 return (
     <div className={styles.counter}>
-        <button disabled= {count <= 1} onClick={decrease}>-</button>
+        <button disabled= {count <= 0}  onClick={decrease}>-</button>
         <span>{count}</span>
-        <button disabled= {count >= stock} onClick={increase}>+</button>
+        <button disabled= {count >= stock}  onClick={increase}>+</button>
         <div>
-        <button disabled = {stock <= 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
+        <button className={styles.agregar} disabled = {stock <= 1} onClick={() => onAdd(count)}>Agregar al carrito</button>
         </div>
     </div>
 )
