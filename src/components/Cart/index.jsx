@@ -3,7 +3,7 @@ import { useCartContext } from '../../context/CartContext'
 import { Link,  } from 'react-router-dom';
 import styles from './cart.module.scss'
 import ItemCart from '../itemCart';
-import CheckoutForm from '../checkout/CheckoutForm';
+
 const Cart = () => {
   const {cart, totalPrice} = useCartContext();
 
